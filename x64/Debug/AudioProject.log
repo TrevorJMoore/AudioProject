@@ -1,0 +1,6 @@
+﻿  AudioProject.cpp
+C:\Users\trevo\Desktop\Development\Applications\AudioProject\AudioProject.cpp(82,25): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
+C:\Users\trevo\Desktop\Development\Applications\AudioProject\AudioProject.cpp(100,33): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\trevo\Desktop\Development\Applications\AudioProject\AudioProject.cpp(101,33): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\trevo\Desktop\Development\Applications\AudioProject\AudioProject.cpp(106,23): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
+  AudioProject.vcxproj -> C:\Users\trevo\Desktop\Development\Applications\AudioProject\x64\Debug\AudioProject.exe

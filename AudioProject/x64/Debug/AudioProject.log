@@ -1,0 +1,7 @@
+﻿  AudioProject.cpp
+  WaveAudio.cpp
+  Generating Code...
+C:\Users\trevo\Desktop\Development\Applications\AudioProject\WaveAudio.cpp(23,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\trevo\Desktop\Development\Applications\AudioProject\WaveAudio.cpp(50,18): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\trevo\Desktop\Development\Applications\AudioProject\WaveAudio.cpp(67,28): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+  AudioProject.vcxproj -> C:\Users\trevo\Desktop\Development\Applications\AudioProject\x64\Debug\AudioProject.exe

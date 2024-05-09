@@ -15,6 +15,7 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+#include "WaveAudio.h"
 
 using namespace std;
 
@@ -56,7 +57,10 @@ void write_as_bytes(ofstream &file, int value, int byte_size) {
 
 int main()
 {
-    ofstream wav;
+    WaveAudio wave(1, 1, 44100, 16);
+    wave.CreateSinWave(440, 0.5, 5);
+    wave.WriteFile("output.wav");
+    /*ofstream wav;
     wav.open("test.wav", ios::binary);
 
     if (wav.is_open()) {
@@ -116,6 +120,6 @@ int main()
         write_as_bytes(wav, end_audio - 8, 4);
     }
     wav.close();
-
+    */
     return 0;
 }

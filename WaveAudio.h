@@ -1,10 +1,13 @@
 #pragma once
+#include <vector>
 #include <string>
 
 
-// This class will enable the creation of .wav file types based on mathematical functions.
+// This class enables audio to be created and editted within a .WAV file.
 class WaveAudio {
 private:
+	std::vector<std::uint8_t> data;
+
 	// Header information for WAVE file format
 
 	// "RIFF" Chunk
@@ -30,15 +33,21 @@ private:
 
 
 public:
-	// Default constructor will set default values for header info
-	WaveAudio(int audio_format, int num_channels, int sample_rate, int bits_per_sample);
+	// Create a .WAV file of given number of channels, sample rate, and bits-per-sample.
+	WaveAudio(const std::uint16_t num_channels, const std::uint32_t sample_rate, 
+		const std::uint16_t bits_per_sample);
 
+	void CreateSinWave(double frequency, double amplitude, double duration);
 
+	void WriteFile(const std::string& filename);
 
 
 	// Accessor Methods:
+	std::string GetChunkId();
 	std::uint32_t GetChunkSize();
+	std::string GetFormat();
 
+	std::string GetSubchunk1Id();
 	std::uint32_t GetSubchunk1Size();
 	std::uint16_t GetAudioFormat();
 	std::uint16_t GetNumChannels();
@@ -47,6 +56,7 @@ public:
 	std::uint16_t GetBlockAlign();
 	std::uint16_t GetBitsPerSample();
 
+	std::string GetSubchunk2Id();
 	std::uint32_t GetSubchunk2Size();
 
 	// Mutator Methods:

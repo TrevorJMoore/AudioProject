@@ -43,21 +43,21 @@ public:
 
 
 	// Accessor Methods:
-	std::string GetChunkId();
-	std::uint32_t GetChunkSize();
-	std::string GetFormat();
+	std::string GetChunkId() const;
+	std::uint32_t GetChunkSize() const;
+	std::string GetFormat() const;
 
-	std::string GetSubchunk1Id();
-	std::uint32_t GetSubchunk1Size();
-	std::uint16_t GetAudioFormat();
-	std::uint16_t GetNumChannels();
-	std::uint32_t GetSampleRate();
-	std::uint32_t GetByteRate();
-	std::uint16_t GetBlockAlign();
-	std::uint16_t GetBitsPerSample();
+	std::string GetSubchunk1Id() const;
+	std::uint32_t GetSubchunk1Size() const;
+	std::uint16_t GetAudioFormat() const;
+	std::uint16_t GetNumChannels() const;
+	std::uint32_t GetSampleRate() const;
+	std::uint32_t GetByteRate() const;
+	std::uint16_t GetBlockAlign() const;
+	std::uint16_t GetBitsPerSample() const;
 
-	std::string GetSubchunk2Id();
-	std::uint32_t GetSubchunk2Size();
+	std::string GetSubchunk2Id() const;
+	std::uint32_t GetSubchunk2Size() const;
 
 	// Mutator Methods:
 	// ChunkID may not be set. It is always "RIFF". Well it could be "RIFX" for big-endian, but we aren't doing that.

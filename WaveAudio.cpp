@@ -20,7 +20,7 @@ WaveAudio::WaveAudio(const std::uint16_t num_channels, const std::uint32_t sampl
 
 void WaveAudio::CreateSinWave(double frequency, double amplitude, double duration) {
 	int total_samples = static_cast<int>(sample_rate * duration);
-	int max_amp = std::pow(2, bits_per_sample) / 2 - 1;
+	double max_amp = std::pow(2, bits_per_sample) / 2 - 1;
 
 	// Resize the data vector to hold the required number of bytes
 	data.resize(total_samples * num_channels * (bits_per_sample / 8));
@@ -76,59 +76,59 @@ void WaveAudio::WriteFile(const std::string& filename) {
 
 // Accessor Methods
 // "RIFF" Chunk
-std::string WaveAudio::GetChunkId() {
+std::string WaveAudio::GetChunkId() const {
 	return chunk_id;
 }
 
-std::uint32_t WaveAudio::GetChunkSize() {
+std::uint32_t WaveAudio::GetChunkSize() const {
 	return chunk_size;
 }
 
-std::string WaveAudio::GetFormat() {
+std::string WaveAudio::GetFormat() const {
 	return format;
 }
 
 
 // "fmt " Sub-chunk
-std::string WaveAudio::GetSubchunk1Id() {
+std::string WaveAudio::GetSubchunk1Id() const {
 	return subchunk1_id;
 }
 
-std::uint32_t WaveAudio::GetSubchunk1Size() {
+std::uint32_t WaveAudio::GetSubchunk1Size() const {
 	return subchunk1_size;
 }
 
-std::uint16_t WaveAudio::GetAudioFormat() {
+std::uint16_t WaveAudio::GetAudioFormat() const {
 	return audio_format;
 }
 
-std::uint16_t WaveAudio::GetNumChannels() {
+std::uint16_t WaveAudio::GetNumChannels() const {
 	return num_channels;
 }
 
-std::uint32_t WaveAudio::GetSampleRate() {
+std::uint32_t WaveAudio::GetSampleRate() const {
 	return sample_rate;
 }
 
-std::uint32_t WaveAudio::GetByteRate() {
+std::uint32_t WaveAudio::GetByteRate() const {
 	return byte_rate;
 }
 
-std::uint16_t WaveAudio::GetBlockAlign() {
+std::uint16_t WaveAudio::GetBlockAlign() const {
 	return block_align;
 }
 
-std::uint16_t WaveAudio::GetBitsPerSample() {
+std::uint16_t WaveAudio::GetBitsPerSample() const {
 	return bits_per_sample;
 }
 
 
 // "data" Sub-chunk
-std::string WaveAudio::GetSubchunk2Id() {
+std::string WaveAudio::GetSubchunk2Id() const {
 	return subchunk2_id;
 }
 
-std::uint32_t WaveAudio::GetSubchunk2Size() {
+std::uint32_t WaveAudio::GetSubchunk2Size() const {
 	return subchunk2_size;
 }
 

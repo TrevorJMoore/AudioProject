@@ -128,9 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AudioProject.cpp" />
+    <ClCompile Include="SineWave.cpp" />
+    <ClCompile Include="Wave.cpp" />
     <ClCompile Include="WaveAudio.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SineWave.h" />
+    <ClInclude Include="SquareWave.h" />
+    <ClInclude Include="TriangleWave.h" />
+    <ClInclude Include="Wave.h" />
     <ClInclude Include="WaveAudio.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

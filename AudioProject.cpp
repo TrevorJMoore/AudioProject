@@ -15,15 +15,15 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
-#include "WaveAudio.h"
+#include "SineWave.h"
 
 using namespace std;
 
 
 int main()
 {
-    WaveAudio wave(1, 44100, 16);
-    wave.CreateSinWave(440, 0.5, 5);
-    wave.WriteFile("output.wav");
+    SineWave wave(440.0, 1.0, 25.0);
+    wave.ProduceSineWave(0.005);
+    wave.PrintData();
     return 0;
 }

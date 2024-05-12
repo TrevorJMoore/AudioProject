@@ -18,6 +18,9 @@ WaveAudio::WaveAudio(const std::uint16_t num_channels, const std::uint32_t sampl
 
 }
 
+// Keeping this function for now as it will help me later in remembering to
+// scale my amplitudes of my sound waves.
+// In the future this function will be REMOVED! DO NOT INTEND ON USING THIS!
 void WaveAudio::CreateSinWave(double frequency, double amplitude, double duration) {
 	int total_samples = static_cast<int>(sample_rate * duration);
 	double max_amp = std::pow(2, bits_per_sample) / 2 - 1;

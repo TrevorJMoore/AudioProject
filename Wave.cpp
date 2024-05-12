@@ -14,10 +14,10 @@ Wave::Wave() {
 
 // Parameterized Constructor
 // Initialize a Wave object.
-Wave::Wave(double frequency_hz, double wavelength_m, double amplitude_m) {
+Wave::Wave(double frequency_hz, double wavelength_m, double amplitude) {
 	SetFrequency(frequency_hz);
 	SetWavelength(wavelength_m);
-	SetAmplitude(amplitude_m);
+	SetAmplitude(amplitude);
 	Wave::velocity_ms = frequency_hz * wavelength_m;
 
 	sample_rate = 44100;
@@ -43,7 +43,7 @@ double Wave::GetVelocity() const {
 
 // Get amplitude of current waveform
 double Wave::GetAmplitude() const {
-	return amplitude_m;
+	return amplitude;
 }
 
 // Get sample rate of current waveform
@@ -61,7 +61,7 @@ std::uint16_t Wave::GetBitDepth() const {
 // Set the frequency of the current waveform
 void Wave::SetFrequency(double frequency_hz) {
 	Wave::frequency_hz = frequency_hz;
-	Wave::velocity_ms = frequency_hz * amplitude_m;
+	Wave::velocity_ms = frequency_hz * amplitude;
 }
 
 // Set the wavelength of the current waveform
@@ -71,8 +71,8 @@ void Wave::SetWavelength(double wavelength_m) {
 }
 
 // Set the amplitude of the current waveform
-void Wave::SetAmplitude(double amplitude_m) {
-	Wave::amplitude_m = amplitude_m;
+void Wave::SetAmplitude(double amplitude) {
+	Wave::amplitude = amplitude;
 }
 
 // Set the sample rate of the current waveform

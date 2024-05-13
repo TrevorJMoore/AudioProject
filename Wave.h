@@ -13,14 +13,21 @@ private:
 	std::uint32_t sample_rate;
 	std::uint16_t bit_depth;
 
+	
+
 
 public:
+	// TESTING VARIABLE SET PRIVATE LATER
+	std::vector<double> wave_data;
 	
 	// Default Constructor
 	Wave();
 
 	// Parameterized Constructor
 	Wave(double frequency_hz, double wavelength_m, double amplitude);
+
+	// Methods
+	void PrintData();
 
 
 	// Accessor Methods

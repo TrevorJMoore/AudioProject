@@ -1,7 +1,6 @@
 #define _USE_MATH_DEFINES
 #include "SineWave.h"
 #include <cmath>
-#include <iostream>
 
 
 SineWave::SineWave() : Wave() {
@@ -20,13 +19,7 @@ void SineWave::ProduceSineWave(double duration_seconds) {
 		// y(n) = A * sin(2*PI*(f/sample rate)*n)
 		// Where n is sample index, A is amplitude, and f is frequency.
 		double value = GetAmplitude()* sin(2 * M_PI * GetFrequency() / GetSampleRate() * sample);
-		wave_data.push_back(value);
+		Wave::wave_data.push_back(value);
 	}
 	
-}
-
-void SineWave::PrintData() {
-	for (double n : wave_data) {
-		std::cout << n << "\n";
-	}
 }

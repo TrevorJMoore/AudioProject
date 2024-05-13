@@ -1,4 +1,5 @@
 #include "Wave.h"
+#include <iostream>
 // Default Constructor
 // Create a default Wave object.
 Wave::Wave() {
@@ -23,6 +24,13 @@ Wave::Wave(double frequency_hz, double wavelength_m, double amplitude) {
 	sample_rate = 44100;
 	bit_depth = 16;
 }
+
+void Wave::PrintData() {
+	for (double n : wave_data) {
+		std::cout << n << "\n";
+	}
+}
+
 
 // Accessor Methods
 
